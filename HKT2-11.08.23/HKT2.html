@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="HKT2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Danh sách học viên</h1>
+        <div id="box_head" class="box_head">
+            <div id="box_find" class="box_find">
+                <label for="input_find">Tìm kiếm tên học viên:</label>
+                <input type="text" id="input_find">
+                <button type="submit" id="btn_find" onclick="searchName()">Tìm kiếm</button>
+            </div>
+            <div id="box_add" class="box_add">
+                <button type="button" id="btn_add" onclick="toggleForm()">Add</button>
+            </div>
+        </div>
+
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone number</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                    <th>Hành động</th>
+                    <th><button id="arrange" onclick="arrange()">Sắp xếp(anpha b)</button></th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+                <!-- <tr>
+                    <td>1</td>
+                    <td>A</td>
+                    <td>a@gmail.com</td>
+                    <td>0981982987</td>
+                    <td>Hà Nội</td>
+                    <td>Nam</td>
+                    <td>
+                        <button type="button" id="btn_edit">Edit</button>
+                        <button type="button" id="btn_delete">Delete</button>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form_info" id="form_info">
+        <form action="" id="form" class="form">
+            <h2>Thông tin học viên</h2>
+            <div>
+                <label for="form_name">Họ và tên</label>
+                <input type="text" id="form_name" class="p1" placeholder="Vui lòng nhập tên" required>
+            </div>
+            <div>
+                <label for="form_email">Email</label>
+                <input type="email" id="form_email" class="p1" placeholder="Vui lòng nhập email" required>
+            </div>
+            <div>
+                <label for="form_phoneNumber">Số điện thoại</label>
+                <input type="text" id="form_phoneNumber" class="p1" placeholder="Vui lòng nhập số điện thoại" required>
+            </div>
+            <div>
+                <label for="form_address">Quê quán</label>
+                <input type="text" id="form_address" class="p1" placeholder="Vui lòng nhập quê quán" required>
+            </div>
+            <div>
+                <label for="form_name">Giới tính</label>
+                <input type="radio" id="form_nam" class="p1" name="choose" value="Nam"><span>Nam</span>
+                <input type="radio" id="form_nu" class="p1" name="choose" value="Nữ"><span>Nữ</span>
+            </div>
+            <button type="submit" id="btn_save" class="p1">Save</button>
+        </form>
+    </div>
+
+
+
+
+
+    <script src="HKT2.js"></script>
+</body>
+
+</html>
